@@ -8,6 +8,7 @@ import {
 } from 'react-router-dom';
 import Header from '../components/Header';
 import Search from '../components/Search';
+import List from '../components/List';
 
 function App() {
   return (
@@ -23,7 +24,7 @@ function App() {
 				</Route>
 			</Switch>
 		</Router>
-
+		<List />
 	</>
   );
 }
