@@ -24,6 +24,22 @@ export default {
             'apikey':baseQueryParams.apikey
         },
     }),
+
+  getCharactersByName: (offset, perPage, nameStartsWith) =>
+  axios({
+      'method':'GET',
+      'url':baseQueryParams.baseURL+`characters`,
+      'headers': {
+          'content-type':'application/octet-stream',
+      },
+      'params': {
+          'limit':perPage,
+          'offset':offset,
+          'nameStartsWith':nameStartsWith,
+          'apikey':baseQueryParams.apikey
+      },
+  }),
+
   getCharacter: (id) =>
     axios({
       'method':'GET',
@@ -34,5 +50,6 @@ export default {
       'params': {
           'apikey':baseQueryParams.apikey
       },
-  })
+    }),
+
 }
